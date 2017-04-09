@@ -1,0 +1,21 @@
+<div>
+    <h3>Todo List</h3>
+
+</div>
+<div>
+    <ul>
+        <li *ngFor="let item of todoList;">
+            {{ item }}
+        </li>
+    </ul>
+</div>
+<div>
+    <app-todo-input #firstInput></app-todo-input>
+    <div *ngIf="secondVisibility">
+        <app-todo-input #secondInput></app-todo-input>
+    </div>
+    <div>
+        <button (click)="dump();">Dump</button>
+        <button (click)="toggleVisibility();">Toggle</button>
+    </div>
+</div>
